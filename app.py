@@ -4,6 +4,7 @@ import dash_html_components as html
 import plotly.graph_objs as go
 from dash.dependencies import Input, Output
 
+'''
 ########### Define your variables
 beers=['Chesapeake Stout', 'Snake Dog IPA', 'Imperial Porter', 'Double Dog IPA']
 ibu_values=[35, 60, 85, 75]
@@ -59,6 +60,16 @@ app.layout = html.Div(children=[
     html.A('Data Source', href=sourceurl),
     ]
 )
+'''
+
+
+app = dash.Dash()
+
+app.layout =html.Div([
+    html.H1("Mapa"),
+    html.Iframe(id="map",srcDoc=open("covid_por_mpio.html",encoding="utf8").read(),width="100%",height="600")
+        
+    ])
 
 if __name__ == '__main__':
     app.run_server()
