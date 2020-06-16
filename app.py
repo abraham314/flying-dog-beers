@@ -3,7 +3,10 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
 from dash.dependencies import Input, Output
+import pandas as pd
+import yfinance as yf
 
+gdl=yf.Ticker('MXN=X')
 
 ########### Define your variables
 beers=['Chesapeake Stout', 'Snake Dog IPA', 'Imperial Porter', 'Double Dog IPA']
